@@ -1,0 +1,215 @@
+body {
+    height: 100vh;
+     background: linear-gradient(90deg,lightblue,rgb(182, 247, 243));
+  
+  }
+  .slider-thumb::before {
+    position: absolute;
+    content: "";
+    left: 30%;
+    top: 20%;
+    width: 450px;
+    height: 450px;
+    background: #ffffff;
+    border-radius: 62% 47% 82% 35% / 45% 45% 80% 66%;
+    will-change: border-radius, transform, opacity;
+    animation: sliderShape 5s linear infinite;
+    display: block;
+    z-index: -1;
+    -webkit-animation: sliderShape 5s linear infinite;
+  }
+  @keyframes sliderShape{
+    0%,100%{
+    border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+      transform: translate3d(0,0,0) rotateZ(0.01deg);
+    }
+    34%{
+        border-radius: 70% 30% 46% 54% / 30% 29% 71% 70%;
+      transform:  translate3d(0,5px,0) rotateZ(0.01deg);
+    }
+    50%{
+      transform: translate3d(0,0,0) rotateZ(0.01deg);
+    }
+    67%{
+      border-radius: 100% 60% 60% 100% / 100% 100% 60% 60% ;
+      transform: translate3d(0,-3px,0) rotateZ(0.01deg);
+    }
+  }
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Jersey 25", sans-serif;
+    font-weight: 400;
+    font-style: normal; 
+}
+.gatoPic{
+    height: 120px;
+    margin: 0;
+    z-index: 2;
+}
+.sunyiGato{
+    height: 120px;
+    margin: 0;
+    position: absolute;
+    z-index: 1;
+    width: 175px;
+}
+.gatoPic:hover{
+    opacity: 0%;
+}
+header {
+    position:fixed;
+    background: lightblue;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 60px;
+    z-index: 100;
+    border-bottom: 5px;
+    border-color: black;
+}
+figure {
+    margin-top: 0;
+
+    display: flex;
+    align-items: center;
+}
+.point {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.point img{
+    height: 60px;
+}
+.point i{
+    font-size: 60px;
+}
+#kez{
+    text-orientation:sideways-right ;
+}
+.point i, a {
+    margin: 0 10px;
+    color: white;
+}
+header p {
+    margin-left: 500px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+.szoveg { margin-top: 650px;
+}
+.szoveg .lorem1{
+    font-size: xx-large;
+    justify-content: center;
+    align-items: center;   
+    color: lightseagreen;
+    overflow: hidden;
+}
+body {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column; 
+}
+.szoveg form{
+    position: relative;
+    width: fit-content;
+    align-items: center;
+    display: flex;
+    flex-direction: column; 
+    border: dotted;
+    margin: 15px;
+    justify-content: space-between;
+}
+.szoveg form input {
+    margin: 1px 10px;
+    font-size: xx-large;
+}
+#neved{
+    width: 600px;
+    height: 40px;
+}
+#cicaNeve{
+    width: 600px;
+    height: 40px;
+}
+#kuld{
+    width: 350px;
+    height: 30px;
+    justify-self: center;
+    margin: 1px 10px;
+    font-size: xx-large;
+}
+.kerdoiv{
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+body .szoveg .zaras{
+    display: flex;
+    width: 100%;
+    height: 300px;
+    background: radial-gradient(lightblue,lightseagreen);
+    font-size: large;
+    font-weight: 10;
+    color: rgb(217, 217, 217);
+    align-items:end;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+.szoveg .zaras p{
+    text-align: center;
+}
+.szoveg .zaras .feliratkoz{
+    align-self: center;
+    border: none;
+}
+.szoveg .zaras .feliratkoz p{
+    font-size: 72px;
+}
+.szoveg .zaras .feliratkoz button{
+    width: 300px;
+    background: rgb(204, 11, 78);
+    height: 30px;
+    color: black;
+    border-radius: 15px;
+}
+form input, button{
+    border-radius: 15px;
+}
+@media(max-width: 1024px){
+    header{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    header p {
+        font-size: small;
+    }
+    header .point{
+        width: fit-content;
+        height:fit-content ;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        left: 0;
+    }
+    header p{
+        margin: 0;
+    }
+    .szoveg{
+        width: 100%;
+    }
+    .szoveg .kerdoiv{
+        font-size: medium
+    }
+    .szoveg .zaras .feliratkoz p{
+        text-align: center;
+    }
+    body .szoveg .zaras{
+        background: radial-gradient(lightblue,lightseagreen);
+    }
+}
